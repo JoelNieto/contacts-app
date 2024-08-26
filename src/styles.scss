@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@layer tw-base, primeng, tw-components, tw-utilities, tw-variants;
+
+// Please take note of the order in which these are imported
+@import "tailwindcss/base.css" layer(tw-base);
+@import "primeng/resources/primeng.min.css";
+@import "primeng/resources/themes/aura-light-blue/theme.css";
+@import "primeicons/primeicons";
+@import "tailwindcss/components.css" layer(tw-components);
+@import "tailwindcss/utilities.css" layer(tw-utilities);
+@import "tailwindcss/variants.css" layer(tw-variants);
+
+@layer tw-base {
+}
+
+@layer tw-components {
+  // tailwind component classes here
+}
+
+@layer tw-utilities {
+  // tailwind utitlity classes here
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply text-gray-700 mb-8;
+}
+
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-xl;
+}
+
+.input-container {
+  @apply flex flex-col gap-1.5 w-full justify-end;
+  .p-dropdown,
+  .p-icon-field,
+  .p-password,
+  input,
+  .p-inputnumber,
+  .p-calendar {
+    @apply w-full;
+  }
+  label {
+    @apply text-sm text-slate-500;
+  }
+}
+
+.p-password {
+  @apply w-full;
+}
